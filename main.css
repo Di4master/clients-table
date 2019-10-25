@@ -11,23 +11,21 @@ body {
 
 .table {
   width: 1000px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
-.table__switch label,
-#switch {
+.table__switch {
+  margin: 0 50px 10px;
+}
+
+.table__switch * {
   cursor: pointer;
-  margin: 30px 0 15px;
 }
 
 .table__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid black;
   background-color: black;
   color: white;
   padding: 10px 0;
@@ -35,16 +33,13 @@ body {
 
 .table__header,
 .table__body {
-  padding-left: 100px;
+  padding-left: 60px;
 }
 
 .table__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 5px 0;
   cursor: pointer;
 }
@@ -62,11 +57,11 @@ body {
 }
 
 .table__col:nth-child(3) {
-  width: 30%;
+  width: 35%;
 }
 
 .table__col:nth-child(4) {
-  width: 20%;
+  width: 15%;
 }
 
 .parent-item {
@@ -77,12 +72,12 @@ body {
   content: '\25BC';
   font-size: 0.75rem;
   position: absolute;
-  left: -15px;
+  left: -28px;
   top: 7px;
 }
 
 .parent-item.child-item::after {
-  left: -12px;
+  left: -15px;
 }
 
 .child-item {
@@ -105,5 +100,23 @@ body {
 
 .child-item--hidden {
   display: none;
+}
+
+.is_active-color {
+  color: forestgreen;
+}
+
+.inactive-color {
+  color: gray;
+}
+
+.alert-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+  border-radius: 0.25rem;
+  padding: 12px 20px;
+  margin: 20px auto;
+  width: 950px;
 }
 /*# sourceMappingURL=main.css.map */
