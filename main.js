@@ -13,7 +13,7 @@ function renderTable(data) {
     data.sort( compare('parentId', 'id'))
         .forEach(item => createRow(item, rowsContainer, dataArray));
 
-    root.append(rowsContainer);   // Добавляем таблицу в DOM одним рендером
+    root.append(rowsContainer);   // Добавляем таблицу в DOM единым контейнером
 
     const inactiveItems = document.querySelectorAll('[data-status="inactive"]');
     const childItems = document.querySelectorAll('.child-item');
