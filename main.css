@@ -74,6 +74,20 @@ body {
   position: absolute;
   left: -28px;
   top: 7px;
+  cursor: pointer;
+  pointer-events: all;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.parent-item.parent-item--opened::after {
+  -webkit-transform: initial;
+          transform: initial;
+  color: gray;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .parent-item.child-item::after {
@@ -102,11 +116,11 @@ body {
   display: none;
 }
 
-.is_active-color {
+[data-status="active"] > .table__row > .table__col:last-child {
   color: forestgreen;
 }
 
-.inactive-color {
+[data-status="inactive"] > .table__row > .table__col:last-child {
   color: gray;
 }
 

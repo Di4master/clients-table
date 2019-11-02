@@ -70,6 +70,18 @@ body {
         position: absolute;
         left: -28px;
         top: 7px;
+        cursor: pointer;
+        pointer-events: all;
+        transform: rotate(-90deg);
+        transition: all 0.1s ease-in-out;
+    }
+}
+
+.parent-item.parent-item--opened {
+    &::after {
+        transform: initial;
+        color: gray;
+        transition: all 0.1s ease-in-out;
     }
 }
 
@@ -99,11 +111,19 @@ body {
     display: none;
 }
 
-.is_active-color {
+// .is_active-color {
+//     color: forestgreen;
+// }
+
+// .inactive-color {
+//     color: gray;
+// }
+
+[data-status="active"] > .table__row > .table__col:last-child {
     color: forestgreen;
 }
 
-.inactive-color {
+[data-status="inactive"] > .table__row > .table__col:last-child {
     color: gray;
 }
 
